@@ -2,26 +2,22 @@
     문자열 str 출력
 */
 
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
-let input = [];
-
-rl.on('line', function (line) {
-    input = [line];
-}).on('close',function(){
-    str = input[0];
-    console.log(str)
-});
-
-or
 
 
 const readline = require('readline');
+
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-}).on('line', console.log)
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.once('line', (input) => {
+  const N = parseInt(input);
+  const [A,B] = input.trim().split(' ').map(Number);
+  const result = solution(N);
+  console.log(result);
+  rl.close();
+});
+
+const [A,B] = input.trim().split(' ').map(Number);
