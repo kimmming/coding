@@ -37,3 +37,36 @@ function solution(N){
         return (N-card)*2;
     }
 }
+
+/**
+function findLastCard(N) {
+  const queue = [];
+  for (let i = 1; i <= N; i++) {
+    queue.push(i);
+  }
+
+  while (queue.length > 1) {
+    queue.shift();
+
+    const card = queue.shift();
+    queue.push(card);
+  }
+
+  return queue[0];
+}
+
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.on('line', (input) => {
+  const N = parseInt(input);
+  const result = findLastCard(N);
+  console.log(result);
+
+  rl.close();
+});
+
+ */
